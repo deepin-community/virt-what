@@ -1,0 +1,2 @@
+# internal helper, not meant to be run directly
+virt-what: no-manual-page [usr/libexec/virt-what-*]
