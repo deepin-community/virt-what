@@ -1,0 +1,11 @@
+#!/bin/sh -
+
+if [ $# -ne 0 ]; then
+	exit 0;
+fi
+
+# fake metadata
+echo ecs.xxxxx.large
+
+# fake timeout behavior
+exit 124

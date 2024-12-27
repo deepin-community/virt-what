@@ -1,15 +1,23 @@
-Source: template-repository
-Section: unknown
+Source: virt-what
+Section: admin
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Libvirt Maintainers <pkg-libvirt-maintainers@lists.alioth.debian.org>
+Uploaders: Guido Günther <agx@sigxcpu.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Vcs-Git: https://salsa.debian.org/libvirt-team/virt-what.git
+Vcs-Browser: https://salsa.debian.org/libvirt-team/virt-what
+Homepage: https://people.redhat.com/~rjones/virt-what/
 
-Package: template-repository
+Package: virt-what
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: dmidecode [any-amd64 any-i386 arm64 ia64 riscv64],
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: detect if we are running in a virtual machine
+ Virt-what is a shell script which can be used to detect if the program is
+ running in a virtual machine (VM).
+ .
+ The program prints out a list of "facts" about the virtual machine, derived
+ from heuristics. One fact is printed per line.
